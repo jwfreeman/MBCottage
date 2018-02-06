@@ -11,7 +11,7 @@ email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Mary Beth's Cottage is helping those who are the closest to any patient in a hospital, the families. 
   
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "jwfreeman.github.io/MBCottage" # the subpath of your site, e.g. /blog
 # url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
