@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jQuery.appear</title>
+  <meta name="description" content="Mary Beth's Cottage is helping those who are the closest to any patient in a hospital, the families. 
+">
+
+
+  <link rel="stylesheet" href="/css/app.css">
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600,300" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/css/superslides.css"/>
+  <link rel="stylesheet" href="/css/slick-theme.css"/>
+  <link rel="stylesheet" href="/css/slick.css"/>
+  <link rel="stylesheet" href="/css/animate.css"/>
+  <link rel="stylesheet" href="/css/linea-styles.css"/>
+  <link rel="stylesheet" href="/css/linea-arrows-styles.css"/>
+  <link rel="stylesheet" href="/css/font-awesome.css"/>
+  <link rel="stylesheet" href="/css/chivo.css"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+
+  <link rel="canonical" href="http://localhost:4000/bower_components/appear/">
+  <link rel="alternate" type="application/rss+xml" title="Mary Beth's Cottage" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+
+    <div class='contain-to-grid sticky transparent'>
+  <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+    <ul class='title-area'>
+      <li class="">
+        <h1>
+          <a href='http://localhost:4000/index.html'>
+            <span>MaryBeth's </span>Cottage
+          </a>
+        </h1>
+      </li>
+    </ul>
+    <div id="menu-toggler" class="right">
+      <a href='#'>
+        <i class="icon-arrows-hamburger-2"></i>
+      </a>
+    </div>
+    <section class='top-bar-section closed'>
+      <ul class='right'>
+        <li><a href="/index.html" style="color: white;"> Home</a></li>
+        <li><a href="#" style="color:white">The Cottage</a></li>
+        <li><a href="#" style="color: white">Research</a></li>
+        <li><a href="#" style="color: white">Support Us</a></li>
+        <li><a href="#" style="color: white;">Our Story</a></li>
+
+       <!-- 
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/index.html">Home</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/about.html">The Cottage</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/portfolio.html">Research</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/contact.html">Support Us</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/blog.html">Our Story</a>
+            </li>
+          
+        
+          -->
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+    <h1 id="jqueryappear">jQuery.appear</h1>
+
+<p>This is a total revamp of original jquery.appear plugin hosted on http://code.google.com/p/jquery-appear/</p>
+
+<p>Check <a href="http://morr.github.com/appear.html">demo page</a>!</p>
+
+<p>This plugin can be used to prevent unnecessary processeing for content that is hidden or is outside of the browser viewport.</p>
+
+<p>It implements a custom <em>appear</em>/<em>disappear</em> events which are fired when an element became visible/invisible in the browser viewport.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $('someselector').appear(); // It supports optional hash with "force_process" and "interval" keys. Check source code for details.
+
+    $('&lt;div&gt;test&lt;/div&gt;').appear(); // It also supports raw DOM nodes wrapped in jQuery.
+
+    $('someselector').on('appear', function(event, $all_appeared_elements) {
+      // this element is now inside browser viewport
+    });
+    $('someselector').on('disappear', function(event, $all_disappeared_elements) {
+      // this element is now outside browser viewport
+    });
+</code></pre></div></div>
+
+<p>If you want to fire <em>appear</em> event for elements which are close to vieport but are not visible yet, you may add data attributes <em>appear-top-offset</em> and <em>appear-left-offset</em> to DOM nodes.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    &lt;div class="postloader" data-appear-top-offset="600"&gt;...&lt;/div&gt; # appear will be fired when an element is below browser viewport for 600 or less pixels
+</code></pre></div></div>
+
+<p>Appear check can be forced by calling <em>$.force_appear()</em>. This is suitable in cases when page is in initial state (not scrolled and not resized) and when you want manually trigger appearance check.</p>
+
+<p>Also this plugin provides custom jQuery filter for manual checking element appearance.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    $('someselector').is(':appeared')
+</code></pre></div></div>
+
+<h1 id="license">License</h1>
+
+<blockquote>
+  <p>Licensed under <a href="http://opensource.org/licenses/MIT">MIT license</a>.</p>
+
+  <p>Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the “Software”), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:</p>
+
+  <p>The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.</p>
+
+  <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+
+
+    <div class="full no-padding footer brown centered-text">
+  <div class="four spacing"></div>
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="socials">
+        <li><a href="#"><i class='fa fa-twitter'></i></a></li>
+        <li><a href="#"><i class='fa fa-facebook'></i></a></li>
+        <li><a href="#"><i class='fa fa-linkedin'></i></a></li>
+        <li><a href="#"><i class='fa fa-dribbble'></i></a></li>
+        <li><a href="#"><i class='fa fa-behance'></i></a></li>
+      </ul>
+      <p>Copyright ©2018 Mary Beth's Cottage.</p>
+      <p>All rights reserved.</p>
+      <div class="four spacing"></div>
+      <p class="back-to-top"><a href="#"><i class="fa fa-chevron-up"></i>Back to top</a></p>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script src="/js/jquery.superslides.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/bower_components/countto/jquery.countTo.js"></script>
+<script src="/bower_components/appear/jquery.appear.js"></script>
+<script src="/js/app.js"></script>
+
+
+  </body>
+
+</html>

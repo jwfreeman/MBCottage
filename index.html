@@ -1,0 +1,299 @@
+---
+layout: default
+section_id: home
+slides:
+- title: A Home Away From Home 
+  text: For <span>Caregivers &amp; Patients</span>
+  button:
+    text: Learn More
+    url: #
+  bg_color: "#9DDBD8"
+  image: images/slide1.jpeg
+- title: Ongoing Research
+  text: Improving Health <span>&amp; Aiding Recovery </span>
+  button:
+    text: See Our Work
+    url: #
+  bg_color: "#c9c9c9"
+  image: images/slide3.jpeg
+- title: Support Us
+  text: Help Us  <span>help</span> more people
+  button:
+    text: Donate
+    url: #
+  bg_color: "#f6c418"
+  image: images/slide4.jpeg
+- title: Planning for the Future
+  text: See What <span>We Have</span> in store
+  button:
+    text: Get Involved
+    url: #
+  bg_color: "#E4A48B"
+  image: images/slide5.jpeg
+
+works_left:
+- title: Cooco fashion
+  link_to: portfolio-item.html
+  image: images/@stock/work-1.jpg
+  categories: Website, brand
+- title: Dear god
+  link_to: portfolio-item.html
+  image: images/@stock/work-20.jpg
+  categories: Website, print
+- title: Green choice
+  link_to: portfolio-item.html
+  image: images/@stock/work-22.jpg
+  categories: Website
+- title: Perfect bags
+  link_to: portfolio-item-2.html
+  image: images/@stock/work-7.jpg
+  categories: Perfect bags
+
+works_right:
+- title: Dances App
+  link_to: portfolio-item-2.html
+  image: images/@stock/work-3.jpg
+  categories: Website
+- title: Vintage chairs
+  link_to: portfolio-item.html
+  image: images/@stock/work-5.jpg
+  categories: Graphic, brand
+- title: Help Five
+  link_to: portfolio-item-2.html
+  image: images/@stock/work-6.jpg
+  categories: Photography
+- title: Brandbooks
+  link_to: portfolio-item.html
+  image: images/@stock/work-8.jpg
+  categories: Website, graphic
+
+milestones:
+- title: Projects
+  from: 0
+  to: 69
+- title: Ideas
+  from: 0
+  to: 708
+- title: Countries
+  from: 0
+  to: 10
+- title: Articles
+  from: 0
+  to: 287
+
+testimonials_left:
+- author: Philip Wiltmore - Single Dad, Nebraska
+  content: “We came to Florida expecting to be at the hospital for a matter of days, and three weeks later we still had not left. Mary Beths Cottage made this unforseeable challenge much smoother for Abbie and myself.”
+  avatar: /images/testimonials/singleDad.jpeg
+- author: Amy Thompson - Student, Texas
+  content: “Flying back and forth to Florida was a stressful and sometimes lonely journey, but it helped knowing I always had a helping hand waiting for me once I arrived. ”
+  avatar: images/testimonials/youngAdult.jpeg
+testimonials_right:
+- author: Sherley Hopson &amp; Friends - Northern Florida
+  content: We have always stuck together, and Mary Beths Cottage has allowed us to stay even closer when times are rough. 
+  avatar: images/testimonials/oldFriends.jpeg
+- author: Tom &amp; Sue Davidson - Parents, N. Carolina
+  content: One day we found ourselves in a world that we had never known once our son Zachary became sick. But the support staff and the hospitality gave us one less thing to think about.
+  avatar: images/testimonials/soloInfant.jpeg
+
+clients:
+- image: images/partners/bh-logo.png
+- image: images/partners/brrh_logo.png
+- image: images/partners/ccf_logo.png
+- image: images/partners/hch_logo.png
+- image: images/partners/hehn_logo.png
+- image: images/partners/hhbh_logo.png
+---
+
+<div class="full no-padding" style="height: 100vh;">
+  <div id="slides">
+    <div class="slides-container">
+      {% for slide in page.slides %}
+        <div class="slide">
+          <div class="slide-info">
+            <p>{{ slide.title }}</p>
+            <h1>{{ slide.text }}</h1>
+            <div class="three spacing"></div>
+            <a href="{{ slide.button.url }}" class="button boxed black">{{ slide.button.text }}</a>
+          </div>
+          <div class="slide-left" style="background-color: {{ slide.bg_color }};">
+          </div>
+          <div class="slide-right" style="background: url({{ slide.image }}) center center no-repeat;background-size: cover;">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <nav class="slides-navigation">
+      <a href="#" class="next"><i class="icon-arrows-slim-right"></i></a>
+      <a href="#" class="prev"><i class="icon-arrows-slim-left"></i></a>
+    </nav>
+  </div>
+</div>
+<div class="full light-grey centered-text">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <img src="/images/icons/construction.png" alt="" class="wow flipInY" data-wow-duration="2s" data-wow-delay="0.1s">
+        <div class="spacing"></div>
+        <h2>What we do</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <p class="big-text">
+        Marybeth’s Cottage offers patients and caregivers a place of solace — away from the beeping machines and the noisy commotion of the hospital, to recharge. Our guests will find a <a>home-cooked meal</a>, a <a href="#">quiet place to sleep</a>, and <a href="#">people who understand</a>.
+      </p>
+      <div class="two spacing"></div>
+      <a href="#" class="button boxed black">Know more</a>
+    </div>
+  </div>
+</div>
+<!--<div class="full no-padding">
+  <div class="four spacing"></div>
+  <div class="spacing"></div>
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h2>Recent works</h2>
+        <p>You will love we have done</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="gallery-left-section">
+        {% for work in page.works_left %}
+          <div class="work-wrapper">
+            <a href="{{work.link_to}}" class="work">
+              <img src="{{site.url}}/{{work.image}}" alt="">
+              <div class="info">
+                <h3>{{work.title}}</h3>
+                <p>{{work.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="large-6 columns">
+      <div class="gallery-right-section">
+        {% for work in page.works_right %}
+          <div class="work-wrapper">
+            <a href="{{work.link_to}}" class="work">
+              <img src="{{site.url}}/{{work.image}}" alt="">
+              <div class="info">
+                <h3>{{work.title}}</h3>
+                <p>{{work.categories}}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
+<div class="full light-grey flower">
+  <div class="three spacing"></div>
+  <div class="row">
+    {% for milestone in page.milestones %}
+      <div class="large-3 columns ">
+        <div class="milestone centered-text">
+          <div class="number" style="color: #333" data-from="{{milestone.from}}" data-to="{{milestone.to}}"> </div>
+          <span>{{milestone.title}}</span>
+          <div class="spacing"></div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="three spacing"></div>
+</div>
+-->
+<div class="full">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h2>Testimonials</h2>
+        <p>Get to know some of the Families</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      {% for testimonial in page.testimonials_left %}
+        <div class="quote wow slideInLeft" data-wow-delay="{{ 0.2 | times:forloop.index0 }}s">
+          <div class="row">
+            <div class="small-3 columns">
+              <img src="{{testimonial.avatar}}" alt="auhor">
+            </div>
+            <div class="small-9 columns">
+              <p>{{testimonial.content}}</p>
+              <p class="author">{{testimonial.author}}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="large-6 columns">
+      {% for testimonial in page.testimonials_right %}
+        <div class="quote reverse wow slideInRight" class="wow" data-wow-delay="{{ 0.2 | times:forloop.index0 }}s">
+          <div class="row">
+            <div class="small-3 columns">
+              <img src="{{testimonial.avatar}}" alt="auhor">
+            </div>
+            <div class="small-9 columns">
+              <p>{{testimonial.content}}</p>
+              <p class="author">{{testimonial.author}}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="full brown no-padding">
+  <div class="two spacing"></div>
+  <div class='row'>
+    <div class='large-12 columns'>
+      <div class='clients'>
+        {% for client in page.clients %}
+          <div><a href="#"><img alt="" src="{{site.url}}/{{client.image}}"></a></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="two spacing"></div>
+</div>
+<div class="full centered-text">
+  <div class="section-title">
+    <div class="row">
+      <div class="medium-10 medium-centered columns">
+        <h2>Progess Updates</h2>
+        <p>Keep Up to Date With Us </p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    {% for post in site.posts limit:3 %}
+      <div class="large-4 columns">
+        <div class="post recent-post">
+          {% if post.images %}
+            <a href="{{post.url}}" class="home"><img src="{{site.url}}/{{post.images[0]}}" alt="post"></a>
+            <div class="spacing"></div>
+          {% endif %}
+          <h4>{{post.title}}</h4>
+          <p class="info">
+            <span>
+              <a href="#">{{ post.author }}</a>
+            </span>
+            ,
+            <span>{{ post.date | date: "%B %d, %Y" }}</span>
+          </p>
+          <div class="spacing"></div>
+          <p><a href="{{post.url}}" class="button boxed black">Read more</a></p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>jQuery countTo Plugin</title>
+  <meta name="description" content="Mary Beth's Cottage is helping those who are the closest to any patient in a hospital, the families. 
+">
+
+
+  <link rel="stylesheet" href="/css/app.css">
+  <link href="http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,600,300" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="/css/superslides.css"/>
+  <link rel="stylesheet" href="/css/slick-theme.css"/>
+  <link rel="stylesheet" href="/css/slick.css"/>
+  <link rel="stylesheet" href="/css/animate.css"/>
+  <link rel="stylesheet" href="/css/linea-styles.css"/>
+  <link rel="stylesheet" href="/css/linea-arrows-styles.css"/>
+  <link rel="stylesheet" href="/css/font-awesome.css"/>
+  <link rel="stylesheet" href="/css/chivo.css"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <link rel="stylesheet" href="/css/responsive.css"/>
+
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+
+  <link rel="canonical" href="http://localhost:4000/bower_components/countto/">
+  <link rel="alternate" type="application/rss+xml" title="Mary Beth's Cottage" href="http://localhost:4000/feed.xml">
+</head>
+
+
+  <body>
+
+    <div class='contain-to-grid sticky transparent'>
+  <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+    <ul class='title-area'>
+      <li class="">
+        <h1>
+          <a href='http://localhost:4000/index.html'>
+            <span>MaryBeth's </span>Cottage
+          </a>
+        </h1>
+      </li>
+    </ul>
+    <div id="menu-toggler" class="right">
+      <a href='#'>
+        <i class="icon-arrows-hamburger-2"></i>
+      </a>
+    </div>
+    <section class='top-bar-section closed'>
+      <ul class='right'>
+        <li><a href="/index.html" style="color: white;"> Home</a></li>
+        <li><a href="#" style="color:white">The Cottage</a></li>
+        <li><a href="#" style="color: white">Research</a></li>
+        <li><a href="#" style="color: white">Support Us</a></li>
+        <li><a href="#" style="color: white;">Our Story</a></li>
+
+       <!-- 
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/index.html">Home</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/about.html">The Cottage</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/portfolio.html">Research</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/contact.html">Support Us</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="http://localhost:4000/blog.html">Our Story</a>
+            </li>
+          
+        
+          -->
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+    <h1 id="jquery-countto-plugin">jQuery countTo Plugin</h1>
+<p><a href="https://github.com/mhuggins/jquery-countTo">jQuery countTo</a> is a
+<a href="http://jquery.com">jQuery</a> plugin that will count up (or down) to a target
+number at a specified speed, rendered within an HTML DOM element.</p>
+
+<h2 id="requirements">Requirements:</h2>
+<p><a href="https://github.com/mhuggins/jquery-countTo">jQuery countTo</a> requires the
+latest version of <a href="http://jquery.com">jQuery</a>.</p>
+
+<h2 id="usage">Usage:</h2>
+<p>There are two main approaches to using this plugin: through data attributes on
+DOM nodes, and through JS options explicitly passed to the <code class="highlighter-rouge">countTo</code> function.</p>
+
+<p>These two methods can be mixed and matched as well.  Data attributes takes
+precedence over JS options.</p>
+
+<h3 id="data-attributes">Data Attributes</h3>
+
+<p>This approach allows you to define <code class="highlighter-rouge">data-*</code> attributes on whatever DOM element
+will act as a container for your counter.  This is useful when you already know
+the values at the time that you are constructing the DOM.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="timer" data-from="25" data-to="75"&gt;&lt;/span&gt;
+
+&lt;script type="text/javascript"&gt;&lt;!--
+    $('.timer').countTo();
+//--&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>A more detailed example that demonstrates all possible options being used is as
+follows.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="timer" data-from="0" data-to="100"
+      data-speed="5000" data-refresh-interval="50"&gt;&lt;/span&gt;
+
+&lt;script type="text/javascript"&gt;&lt;!--
+    $('.timer').countTo();
+//--&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>Refer to the <strong>Options</strong> section below for more info on the various options
+available.</p>
+
+<h3 id="javascript-options">JavaScript Options</h3>
+
+<p>This approach allows you to pass values to the <code class="highlighter-rouge">countTo</code> function.  This is
+useful when you don’t know the values at the time the DOM is being rendered.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="timer"&gt;&lt;/span&gt;
+
+&lt;script type="text/javascript"&gt;&lt;!--
+    $('.timer').countTo({from: 0, to: 500});
+//--&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>A more detailed example that demonstrates all possible options being used is as
+follows.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;span class="timer"&gt;&lt;/span&gt;
+
+&lt;script type="text/javascript"&gt;&lt;!--
+    $('.timer').countTo({
+        from: 50,
+        to: 2500,
+        speed: 1000,
+        refreshInterval: 50,
+        formatter: function (value, options) {
+            return value.toFixed(options.decimals);
+        },
+        onUpdate: function (value) {
+            console.debug(this);
+        },
+        onComplete: function (value) {
+            console.debug(this);
+        }
+    });
+//--&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<p>Refer to the <strong>Options</strong> section below for more info on the various options
+available.</p>
+
+<h2 id="options">Options:</h2>
+<p>A complete listing of the options that can be passed to the <code class="highlighter-rouge">countTo</code> method is below.</p>
+
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Data Attribute</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><i>from</i></td>
+    <td><i>data-from</i></td>
+    <td>The number to start counting from. <i>(default: 0)</i></td>
+  </tr>
+  <tr>
+    <td><i>to</i></td>
+    <td><i>data-to</i></td>
+    <td>The number to stop counting at. <i>(default: 100)</i></td>
+  </tr>
+  <tr>
+    <td><i>speed</i></td>
+    <td><i>data-speed</i></td>
+    <td>The number of milliseconds it should take to finish counting.
+        <i>(default: 1000)</i></td>
+  </tr>
+  <tr>
+    <td><i>refreshInterval</i></td>
+    <td><i>data-refresh-interval</i></td>
+    <td>The number of milliseconds to wait between refreshing the counter.
+        <i>(default: 100)</i></td>
+  </tr>
+  <tr>
+    <td colspan="2"><i>formatter (value, options)</i></td>
+    <td>A handler that is used to format the current value before rendering to
+        the DOM.  The true current value and options set is passed to the
+        function, and it is run in the context of the DOM element.  It must
+        return the formatted value. <i>(default:
+        <code>value.toFixed(options.decimal)</code>)</i></td>
+  </tr>
+  <tr>
+    <td colspan="2"><i>onUpdate (value)</i></td>
+    <td>A callback function that is triggered for every iteration that the
+        counter updates.  The currently rendered value is passed to the
+        function, and it is called in the context of the DOM element.
+        <i>(default: null)</i></td>
+  </tr>
+  <tr>
+    <td colspan="2"><i>onComplete (value)</i></td>
+    <td>A callback function that is triggered when counting finishes.  The
+        final rendered value is passed to the function, and it is called in the
+        context of the DOM element. <i>(default: null)</i></td>
+  </tr>
+</table>
+
+<h2 id="created-by">Created By:</h2>
+<p><a href="http://www.matthuggins.com">Matt Huggins</a></p>
+
+<h2 id="license">License:</h2>
+<p>jQuery-countTo is released under the <a href="http://www.opensource.org/licenses/MIT">MIT license</a>.</p>
+
+
+    <div class="full no-padding footer brown centered-text">
+  <div class="four spacing"></div>
+  <div class="row">
+    <div class="small-12 columns">
+      <ul class="socials">
+        <li><a href="#"><i class='fa fa-twitter'></i></a></li>
+        <li><a href="#"><i class='fa fa-facebook'></i></a></li>
+        <li><a href="#"><i class='fa fa-linkedin'></i></a></li>
+        <li><a href="#"><i class='fa fa-dribbble'></i></a></li>
+        <li><a href="#"><i class='fa fa-behance'></i></a></li>
+      </ul>
+      <p>Copyright ©2018 Mary Beth's Cottage.</p>
+      <p>All rights reserved.</p>
+      <div class="four spacing"></div>
+      <p class="back-to-top"><a href="#"><i class="fa fa-chevron-up"></i>Back to top</a></p>
+    </div>
+  </div>
+  <div class="spacing"></div>
+</div>
+
+<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/bower_components/foundation/js/foundation.min.js"></script>
+<script src="/js/jquery.superslides.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.validate.js"></script>
+<script src="/bower_components/countto/jquery.countTo.js"></script>
+<script src="/bower_components/appear/jquery.appear.js"></script>
+<script src="/js/app.js"></script>
+
+
+  </body>
+
+</html>

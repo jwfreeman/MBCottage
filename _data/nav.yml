@@ -1,0 +1,16 @@
+- name: Home
+  path: index.html
+  section_id: home
+- name: The Cottage
+  path: about.html
+  section_id: the cottage
+- name: Research
+  path: portfolio.html
+  section_id: research
+- name: Support Us
+  path: contact.html
+  section_id: support us
+- name: Our Story
+  path: blog.html
+  section_id: our story
+  
