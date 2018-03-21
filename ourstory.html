@@ -1,0 +1,81 @@
+---
+layout: default
+members:
+- name: Barb Waite
+  position: Founder
+  avatar: /MBCottage/images/barbWaite.png
+  avatar_hover: images/@stock/member-1-c.jpg
+  socials:
+  - name: twitter
+    url: #
+  - name: facebook
+    url: #
+  - name: linkedin
+    url: #
+  - name: dribbble
+    url: #
+
+---
+
+
+<div class="full light-grey centered-text tree">
+    <div class="four spacing"></div>
+    <div class="section-title">
+      <div class="row">
+        <div class="medium-10 medium-centered columns">
+          <h1 class="wow slideInUp">Our Story</h1>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="medium-9 medium-centered columns">
+        <div class="header-quote">
+          <p>This isn't just a cottage. It's a story.</p>
+        </div>
+      </div>
+    </div>
+    <div class="two spacing"></div>
+  </div>
+  <div class="full">
+    <div class="section-title">
+      <div class="row">
+        <div class="medium-10 medium-centered columns">
+          <h2>Behind the Scenes</h2>
+          <p>Working day and night to make her dream a reality for people who need it, Barb has sacrificed so much to be an infulence in such a hard time for most families.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% for member in page.members %}
+        <div class="large-12 columns">
+          <div class="member">
+            <img src="{{site.url}}/{{member.avatar}}" alt="">
+            <img class="colored" src="{{site.url}}/{{member.avatar_hover}}" alt="">
+            <div class="member-info">
+              <h4>{{member.name}}</h4>
+              <p class="position">{{member.position}}</p>
+              <ul class="socials">
+                {% for social in member.socials %}
+                  <li><a href="{{social.url}}"><i class="fa fa-{{social.name}}"></i></a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="full light-grey">
+    <div class="section-title">
+      <div class="row">
+        <div class="large-5 columns"> 
+          <img src="/MBCottage/images/together.png" />
+          <p style="font-size: .9em">Barb &amp; Marybeth Waite - 2010</p>
+        </div>
+        <div class="large-7 columns">
+          <p><span style="font-size: 1.5em; color: black;"><strong>It began September 10, 1997</strong></span> when my nine-year-old daughter, Marybeth, fell to the floor with seizures.  Her illness drove us to seek treatment at the Mayo Clinic in Rochester, Minnesota where we stayed at a hospital hospitality house for two weeks of treatment. Two weeks turned into four months — away from our home and family. Equal to her medical care was the comfort we received during our stay at the house.  Surrounded by other patients and caregivers, we found unexplainable healing, hope, and peace. Marybeth and I  learned that a good conversation, laughter, and tears healed our souls.  Sadly, Marybeth passed away at the age of twenty-four in June 2013.</p>
+        </div>    
+      </div>
+    </div>
+  </div>
