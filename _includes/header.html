@@ -3,8 +3,10 @@
     <ul class='title-area'>
       <li class="">
         <h1>
-          <a href='{{site.url}}/index.html'>
-            <span>MaryBeth's </span>Cottage
+          <a href='/MBCottage/index.html'>
+            <div style="margin-top: 12px; background-color: rgba(0, 0, 0, .8); border-radius: 10px; box-shadow: 0px 2px 2px rgba(0, 0, 0, .5);">
+            <img width="150px;" style="padding:10px" src="/MBCottage/images/MB_white.png" />
+            </div>  
           </a>
         </h1>
       </li>
@@ -15,39 +17,12 @@
       </a>
     </div>
     <section class='top-bar-section closed'>
-      <ul class='right'>
-        <li><a href="/MBCottage/index.html" style="color: white;"> Home</a></li>
-        <li><a href="/MBCottage/thecottage.html" style="color:white">The Cottage</a></li>
-        <li><a href="/MBCottage/research.html" style="color: white">Research</a></li>
-        <li><a href="/MBCottage/ourstory.html" style="color: white;">Our Story</a></li>
-        <li><a href="#" style="color: white">Support Us</a></li>
-        
-
-       <!-- {% for item in site.data.nav %}
-          {% if item.section_id == page.section_id %}
-            {% assign active_class = "active" %}
-          {% else %}
-            {% assign active_class = "" %}
-          {% endif %}
-
-          {% if item.children %}
-            <li class="has-dropdown {{active_class}}">
-              <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
-              <ul class='dropdown'>
-                {% for child in item.children %}
-                  <li>
-                    <a href="{{site.url}}/{{ child.path }}">{{ child.name }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </li>
-          {% else %}
-            <li class="{{active_class}}">
-              <a href="{{site.url}}/{{ item.path }}">{{ item.name }}</a>
-            </li>
-          {% endif %}
-        {% endfor %}
-          -->
+      <ul class='right' style="background-color: rgba(0, 0, 0, .8); margin-top: 15px; margin-right: 3%; border-radius: 10px; max-height: 50px; box-shadow: 0px 2px 2px rgba(0, 0, 0, .5)">
+        <li><a class="li-main" href="/MBCottage/index.html" style="color:white; margin-top: -20px;" > <strong>Home</strong></a></li>
+        <li><a href="/MBCottage/thecottage.html" style="color:white; margin-top: -20px;"><strong>The Cottage</strong></a></li>
+        <li><a href="/MBCottage/research.html" style="color: white; margin-top: -20px;"><strong>Research</strong></a></li>
+        <li><a href="/MBCottage/ourstory.html" style="color: white; margin-top: -20px;"><strong>Our Story</strong></a></li>
+        <li><a href="#" style="color: white; margin-top: -20px;"><strong>Support Us</strong></a></li>
       </ul>
     </section>
   </nav>

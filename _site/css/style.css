@@ -63,7 +63,7 @@
   background: #fff; }
 
 .full.flower {
-  background-image: url(../images/@stock/flower.png);
+  background-image: url(/MBCottage/images/MBC_LayoutSchem.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: fixed; }

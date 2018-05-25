@@ -1,0 +1,15 @@
+.li-main {
+    color: red;
+    margin-top: -20px;
+}
+
+
+
+.li-main:hover {
+    color: white; 
+}
+
+
+.listStyle div ul li span {
+    color:rgba(0,0,0, 0.5);
+}
