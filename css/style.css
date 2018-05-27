@@ -63,21 +63,21 @@
   background: #fff; }
 
 .full.flower {
-  background-image: url(/MBCottage/images/MBC_LayoutSchem.png);
+  background-image: url( /images/MBC_LayoutSchem.png);
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: fixed; }
 
 .full.tree {
   min-height: 60%;
-  background-image: url(/MBCottage/images/books.jpeg);
+  background-image: url( /images/books.jpeg);
   background-repeat: no-repeat;
   background-position: center 55%;
   background-attachment: fixed; }
 
 .full.lamp {
   min-height: 60%;
-  background-image: url(/MBCottage/images/hand.png);
+  background-image: url( /images/hand.png);
   background-repeat: no-repeat;
   background-position: 80% 10%;
   background-attachment: fixed; }
