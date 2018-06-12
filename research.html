@@ -3,35 +3,39 @@ layout: default
 
 services:
 - title: Improving a Caregiver's Health
-  desc: Focusing on the wellbeing of the caregiver can be key in any patients health, positively influencing emotion -- and the reseach shows it. 
+  desc: Focusing on the wellbeing of the caregiver can be key in any patients health, positively influencing emotion -- and the research shows it. 
   image:  /images/graphs/CGHGraph.jpg
   image_position: left
+  link: https://www.ncbi.nlm.nih.gov/books/NBK2665/
 - title: Nutrition, Nutrition, Nutrition
   desc: Every meal matters, and the only way to heal/stay healthy is to be properly fed, so that each guest can focus on what really matters during their stay.
   image:  /images/graphs/CGMGraph.jpg
   image_position: right
+  link: http://www.sirc.org/publik/foxfood.pdf
 - title: A Good Night's Rest
   desc: Consistant sleep patterns over time become a challenge, especially when you are not in your own home. Providing a safe and quiet environment to rejouvenate in plays a huge role instead of the noise in a hospital.
   image:  /images/graphs/CGSGraph.jpg
   image_position: left
+  link: https://well.blogs.nytimes.com/2012/08/02/the-clatter-of-the-hospital-room/
 - title: Improving a Patient's Health
   desc: Commutes can make the time spent at a health facility even longer, adding on 1 - 2 hours for some patients. Staying at a Hospitality House can improve your health, and help you get better faster.
   image:  /images/graphs/HOPGraph.jpg
   image_position: right
+  link: https://www.theatlantic.com/health/archive/2015/08/the-transportation-barrier/399728/
 
 principles:
 - title: Readmission of Patients
   desc: Critical to patient and family centered care is ensuring patients have the tools they need to recover at home and avoid the need to return to the hospital.   
   icon: icon-basic-heart
-  link: #
+  link: http://circheartfailure.ahajournals.org/content/11/4/e004310
 - title: Psychological Impact on Health
   desc: Humans are social beings who need that send of belonging and without it, there is a tendency to become depressed...
   icon: icon-basic-flag2
-  link: #
+  link: https://www.rcpsych.ac.uk/quality/qualityandaccreditation/liaisonpsychiatry/plan/nohealthwithout/patientsandcarers/thepsychologicalimpact.aspx
 - title: Importance of Family
   desc: The  importance of families in the healing process is becoming more widely recognized around the world, with research showing their presence can be an effective tool for improving patient outcomes...
   icon: icon-basic-home
-  link: #
+  link: https://www.burke.org/blog/2014/11/caring-for-the-caregiver-the-important-role-of-family-in-rehabilitation/23
 ---
 
 <div class="full centered-text light-cyan lamp">
@@ -67,7 +71,7 @@ principles:
             <h2>{{service.title}}</h2>
             <p>{{service.desc}}</p>
             <div class="two spacing"></div>
-            <a href="#" class="button boxed brown">Case study</a>
+            <a href="{{service.link}}" class="button boxed brown">Case study</a>
           </div>
         </div>
       {% else %}
@@ -76,7 +80,7 @@ principles:
             <h2>{{service.title}}</h2>
             <p>{{service.desc}}</p>
             <div class="two spacing"></div>
-            <a href="#" class="button boxed brown">Case study</a>
+            <a href="{{service.link}}" class="button boxed brown">Case study</a>
           </div>
         </div>
         <div class="medium-6 columns">
@@ -94,7 +98,7 @@ principles:
     <div class="row">
       <div class="medium-10 medium-centered columns">
         <h2>Studies</h2>
-        <p>(need something for right here)</p>
+        <p></p>
       </div>
     </div>
   </div>

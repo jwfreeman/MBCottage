@@ -68,6 +68,13 @@
   background-position: right bottom;
   background-attachment: fixed; }
 
+  .full.flower2 {
+    background-image: url(/images/cityscape.jpg);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-attachment: fixed;
+  } 
+
 .full.tree {
   min-height: 60%;
   background-image: url(/images/books.jpeg);
