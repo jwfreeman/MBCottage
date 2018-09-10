@@ -69,7 +69,7 @@
   background-attachment: fixed; }
 
   .full.flower2 {
-    background-image: url(/images/cityscape.jpg);
+    background-image: url(/images/broundJacksonville.jpg);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-attachment: fixed;
@@ -77,9 +77,9 @@
 
 .full.tree {
   min-height: 60%;
-  background-image: url(/images/books.jpeg);
+  background-image: url(/images/OurStoryHeader.png);
   background-repeat: no-repeat;
-  background-position: center 55%;
+  background-position: bottom right;
   background-attachment: fixed; }
 
 .full.lamp {
@@ -402,8 +402,9 @@ body {
   position: absolute;
   top: 0; }
 
-.member:hover img.colored {
+/* .member:hover img.colored {
   display: block; }
+  */
 
 .member h4 {
   margin-bottom: 4px; }
@@ -442,6 +443,8 @@ ul.socials {
 
 /* contact */
 .contact-details {
+  background-color: rgba(255, 255, 255, 0.801);
+  border-radius: 5px;
   text-align: center;
   margin-bottom: 40px; }
   .contact-details h3 {

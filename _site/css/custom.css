@@ -40,3 +40,33 @@
     }
 
 }
+
+.buttonBox {
+    background-color: black;
+    width: 175px;
+    height: 50px;
+    position: fixed;
+    z-index: 1000000;
+    right: 25px;
+    bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 5px #0000008e;
+    border: 2px solid white;
+    font-size: 1.2em;
+}
+
+.donateText {
+    text-align: center;
+    padding-top: 10px;
+    color: white;
+}
+
+.buttonBox:hover {
+    background-color: white;
+    border-radius: 9px;
+    border: 2px solid black;
+}
+
+.donateText:hover {
+    color: black;
+}
