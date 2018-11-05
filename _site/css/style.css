@@ -65,7 +65,7 @@
 .full.flower {
   background-image: url(/images/MBC_LayoutSchem.png);
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: center top;
   background-attachment: fixed; }
 
   .full.flower2 {
@@ -79,7 +79,7 @@
   min-height: 60%;
   background-image: url(/images/OurStoryHeader.png);
   background-repeat: no-repeat;
-  background-position: bottom right;
+  background-position: center bottom;
   background-attachment: fixed; }
 
 .full.lamp {
